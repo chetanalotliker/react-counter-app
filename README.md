@@ -52,3 +52,5 @@ npx create-react-app react-counter-app --template typescript
 ## Install Bootstrap
 
 npm install react-bootstrap bootstrap
+
+See demo: https://chetanalotliker.github.io/react-counter-app
