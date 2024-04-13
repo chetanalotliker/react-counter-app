@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function App() {
+  const [counter,setCounter] = useState(0);
+
+  const handleIncrement = () => {
+    setCounter(counter+1);
+  }
+
+  const handleDecrement = () => {
+    setCounter(counter-1);
+  }
+
+  const setToZero = () =>{
+    setCounter(0);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+      <h2>React Counter App</h2>
+      <br/><br/>
+      <Row>
+        <Col><Button variant="primary" onClick={handleIncrement}>Increment</Button></Col>
+        <Col><Button variant="primary" onClick={setToZero}>Set to Zero</Button></Col>
+        <Col><Button variant="primary" onClick={handleDecrement}>Decrement</Button></Col>
+      </Row>
+      <br />
+      <Row>
+        <Col><h3>{counter}</h3></Col>
+      </Row>
+    </Container>
+
     </div>
   );
 }
