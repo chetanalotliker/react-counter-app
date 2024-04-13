@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+See demo: https://chetanalotliker.github.io/react-counter-app
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -52,5 +54,3 @@ npx create-react-app react-counter-app --template typescript
 ## Install Bootstrap
 
 npm install react-bootstrap bootstrap
-
-### See demo: `https://chetanalotliker.github.io/react-counter-app`
